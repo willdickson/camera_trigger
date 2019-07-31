@@ -24,6 +24,7 @@ class CameraTrigger(serial.Serial):
 
 
     def set_freq(self,freq):
+        """ set pulse frequency in Hz """
         cmd_dict = {'cmd':'set-freq','freq':freq}
         self.send_cmd(cmd_dict)
 
@@ -35,6 +36,7 @@ class CameraTrigger(serial.Serial):
 
 
     def set_width(self,width):
+        """ set pulse width in us """
         cmd_dict = {'cmd':'set-width','width':width}
         self.send_cmd(cmd_dict)
 
