@@ -2,8 +2,8 @@ import time
 from camera_trigger import CameraTrigger
 
 trig = CameraTrigger('/dev/ttyUSB0')
-trig.set_freq(50)   # frequency (Hz)
-trig.set_width(50)  # pulse width (us)
+trig.set_freq(1000)   # frequency (Hz)
+trig.set_width(500)  # pulse width (us)
 
 print('start')
 trig.start()

@@ -48,8 +48,8 @@ class CameraTrigger(serial.Serial):
 
 
     def send_cmd(self,cmd_dict):
-        cmd_json = json.dumps(cmd_dict)
-        self.write('{}\n'.format(cmd_json))
+        cmd_json = f'{json.dumps(cmd_dict)}\n'
+        self.write(cmd_json.encode())
         rsp_json = self.readline()
         rsp_dict = json.loads(rsp_json)
         self.check_ok(rsp_dict)
